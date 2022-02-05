@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+	<title>DTTL Services</title>
+	<style type="text/css">body{
+background-color: #FFFFFF;
+padding: 0px;
+   margin: 0px;
+}
+
+#gradient
+{
+  width: 100%;
+  height: 800px;
+  padding: 0px;
+  margin: 0px;
+}
+
+@import compass
+
+$envelope-color: #FFF
+
+body
+  background: #797979
+
+.wrap
+  margin: 40px auto
+  position: relative
+  width: 200px
+
+.circle
+  height: 200px
+  width: 200px
+  background: #4AA0DB
+  border: 4px solid #4AA0DB
+  border-radius: 50%
+  cursor: pointer
+  display: block
+  &:hover
+    background: #50ADED
+  &:active
+    background: #4394CA
+    
+.envelope
+  height: 0
+  width: 0
+  border-bottom-right-radius: 8px
+  border-bottom-left-radius: 8px
+  border-bottom: 40px solid $envelope-color
+  border-left: 60px solid $envelope-color
+  border-right: 60px solid $envelope-color
+  border-top: 40px solid transparent
+  margin: 60px 40px
+  position: absolute
+  
+.envelope-top
+  height: 0
+  width: 0
+  border-left: 60px solid transparent
+  border-right: 60px solid transparent
+  border-top: 40px solid $envelope-color  
+  margin: 55px 40px
+  position: absolute
+	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js">
+
+
+
+</script>
+</head>
+<body>
+<div id="gradient">
+<hr /><script>
+var colors = new Array(
+  [62,35,255],
+  [60,255,60],
+  [255,35,98],
+  [45,175,230],
+  [255,0,255],
+  [255,128,0]);
+
+var step = 0;
+//color table indices for: 
+// current color left
+// next color left
+// current color right
+// next color right
+var colorIndices = [0,1,2,3];
+
+//transition speed
+var gradientSpeed = 0.002;
+
+function updateGradient()
+{
+  
+  if ( $===undefined ) return;
+  
+var c0_0 = colors[colorIndices[0]];
+var c0_1 = colors[colorIndices[1]];
+var c1_0 = colors[colorIndices[2]];
+var c1_1 = colors[colorIndices[3]];
+
+var istep = 1 - step;
+var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
+var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
+var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
+var color1 = "rgb("+r1+","+g1+","+b1+")";
+
+var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
+var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
+var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
+var color2 = "rgb("+r2+","+g2+","+b2+")";
+
+ $('#gradient').css({
+   background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
+    background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
+  
+  step += gradientSpeed;
+  if ( step >= 1 )
+  {
+    step %= 1;
+    colorIndices[0] = colorIndices[1];
+    colorIndices[2] = colorIndices[3];
+    
+    //pick two new target color indices
+    //do not pick the same as the current one
+    colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+    colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+    
+  }
+}
+
+setInterval(updateGradient,10);
+</script>
+<h1 style="text-align: center;"><span style="font-family:tahoma,geneva,sans-serif;">Down To The Letter</span></h1>
+
+<h1 style="text-align: center;"><span style="font-family:tahoma,geneva,sans-serif;">XXXXXXXXXX</span></h1>
+
+<h3 style="text-align: center;"><span style="font-family:tahoma,geneva,sans-serif;">XXXXXXXXXXXX</span></h3>
+
+<hr />
+<p style="text-align: center;"></p>
+
+<p style="text-align: center;"><span style="font-family:arial,helvetica,sans-serif;">Website Content Currently Under Maintenance</span></p>
+
+<p style="text-align: center;"><span style="font-family:arial,helvetica,sans-serif;">Please Check Back Soon For Updates</span></p>
+
+<hr />
+<p style="text-align: center;"><em><strong><span style="font-family:arial,helvetica,sans-serif;">Down To The Letter LLC</span></strong></em></p>
+
+<p dir="rtl" style="text-align: center;"><span style="font-family:arial,helvetica,sans-serif;">PO Box 31685</span></p>
+
+<p dir="rtl" style="text-align: center;"><span style="font-family:arial,helvetica,sans-serif;">Houston, TX 77231</span></p>
+<!-- START CENTERED BUTTON -->
+
+<center>
+<table width="100%">
+	<tbody>
+		<tr>
+			<td>
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tbody>
+					<tr>
+						<td height="20" style="font-size: 20px; line-height: 20px;" width="100%"></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+				<tbody>
+					<tr>
+						<td align="center">
+						<table border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+							<tbody>
+								<tr>
+									<td align="center" bgcolor="#87be45" style="-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;" width="150"><a class="button_link" href="mailto:ray.olachia@gmail.com" style="padding: 10px;width:150px;display: block;text-decoration: none;border:0;text-align: center;font-weight: bold;font-size: 15px;font-family: sans-serif;color: #ffffff;background: #87be45;border: 1px solid #87be45;-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;line-height:17px;">Contact Us </a></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tbody>
+					<tr>
+						<td height="20" style="font-size: 20px; line-height: 20px;" width="100%"></td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</center>
+<!-- END CENTERED BUTTON -->
+
+<p style="text-align: center;"><font face="arial, helvetica, sans-serif">&copy; 2005-2019 Down To The Letter, LLC</font></p>
+
+<p></p>
+
+<p></p>
+
+<p></p>
+</div>
+</body>
+</html>
